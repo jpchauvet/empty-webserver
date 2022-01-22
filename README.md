@@ -89,8 +89,6 @@ To shutdown all services running
     $gcloud run services list
     $gcloud run services delete SERVICE
 
-
-
 Next: 
 - Study Git to understand how it is configured for my project
 - Study how to containerize server with Docker on AWS
