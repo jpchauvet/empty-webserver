@@ -2,7 +2,7 @@
 // Tutorial on Youtube www.youtube.com/watch?v=0sRjYzL_oYs
 // To use:
 //   1. start the webserver in the terminal go run main.go
-//   2. from Chrome, go to the server localhost:8070/aboutme
+//   2. from Chrome, go to the server localhost:8080/aboutme
 
 package main
 
