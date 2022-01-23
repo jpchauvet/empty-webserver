@@ -23,8 +23,9 @@ Use menu to create a launch.json in .vscode directory. We also need a go.mod fil
 
 5. Github
 My source code repository area is https://github.com/jpchauvet
-Using VSCode, you can push a project into that area, creating a new 'project' that gets sync-ed
-On any GCP or AWS terminal, get the source code:
+Using VSCode, click on VSCode left panel "Source Control" button.
+To checkin the code, enter a checkin comment in the Message box and hit Ctrl/Enter to both commit and push at the same time.
+To checkout the code on a GCP or AWS terminal:
     $git clone https://github.com/jpchauvet/empty-webserver
 This will create the directory empty-webserver and download all files under git in it
 
@@ -73,7 +74,7 @@ Establish a new firewall rule to allow 8080
     GO back to Instances, click on EC@ instance and see rule has been added.
 Now run the GO program again and test with Chrome connecting to the VM external IP :8080
 
-8. Study how to containerize server with Docker and run on CloudRun
+8. Containerize empty-webserver with Docker and run on CloudRun
 Add a Dockerfile to the project
 Go to GCP Console and open the terminal
 Check that Go and docker are installed
@@ -96,11 +97,12 @@ To shutdown all services running
     $gcloud run services list
     $gcloud run services delete SERVICE
 
-
+9. Containerize empty-webserver with Docker and run on AWS
+Go to AWS CloudShell terminal
+Then what? How do I install docker and Go?
 
 
 Next: 
-- Study how to containerize server with Docker on AWS
 - Study how to run on serverless CloudRun and Lambda
 - Study how server can connect to a cloud database and exchange data
 - Study how server can create data that can be used for feeding Ab Initio
