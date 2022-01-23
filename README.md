@@ -21,7 +21,14 @@ Open Chrome and type localhost:8080
 To debug, we first need to create a configuation. Click on left pane "Run and Debug" icon.
 Use menu to create a launch.json in .vscode directory. We also need a go.mod file in there.
 
-5. Run on GCP Compute Engine
+5. Github
+My source code repository area is https://github.com/jpchauvet
+Using VSCode, you can push a project into that area, creating a new 'project' that gets sync-ed
+On any GCP or AWS terminal, get the source code:
+    $git clone https://github.com/jpchauvet/empty-webserver
+This will create the directory empty-webserver and download all files under git in it
+
+6. Run on GCP Compute Engine
 Comes from www.youtube.com/watch?v=uL1YERoqGQc
 Go to GCP and create a new VM preemtible
 Open SSH and install Go from the Go website:
@@ -49,7 +56,7 @@ Establish a new firewall rule to allow 8080
     Create. This will create the rule. MAKE SURE YOU DELETE IT AFTERWARDS
 Now run the GO program again and test with Chrome connecting to the VM external IP :8080
 
-6. Run on AWS EC2 machine
+7. Run on AWS EC2 machine
 Go to AWS and create a new free tier EC2 machine
 Download the .pem file to ~/Downloads (call it something like aws20220119.pem)
 No need to install anything (it seems all installed) but just in case, the equivalent of 'apt' is 'yum'
@@ -66,7 +73,7 @@ Establish a new firewall rule to allow 8080
     GO back to Instances, click on EC@ instance and see rule has been added.
 Now run the GO program again and test with Chrome connecting to the VM external IP :8080
 
-7. Study how to containerize server with Docker and run on CloudRun
+8. Study how to containerize server with Docker and run on CloudRun
 Add a Dockerfile to the project
 Go to GCP Console and open the terminal
 Check that Go and docker are installed
@@ -89,8 +96,10 @@ To shutdown all services running
     $gcloud run services list
     $gcloud run services delete SERVICE
 
+
+
+
 Next: 
-- Study Git to understand how it is configured for my project
 - Study how to containerize server with Docker on AWS
 - Study how to run on serverless CloudRun and Lambda
 - Study how server can connect to a cloud database and exchange data
